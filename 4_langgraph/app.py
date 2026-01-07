@@ -1,3 +1,4 @@
+import os
 import gradio as gr
 from sidekick import Sidekick
 
@@ -58,4 +59,7 @@ with gr.Blocks(title="Sidekick", theme=gr.themes.Default(primary_hue="emerald"))
     reset_button.click(reset, [], [message, success_criteria, chatbot, sidekick])
 
 
-ui.launch(inbrowser=True)
+ui.launch(
+    server_name="0.0.0.0",
+    server_port=int(os.getenv("PORT", "7860")),
+)

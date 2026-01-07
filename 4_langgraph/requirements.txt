@@ -1,0 +1,11 @@
+gradio
+langgraph
+langchain-openai
+langchain-community
+langchain-core
+langchain-experimental
+playwright
+python-dotenv
+pydantic
+requests
+wikipedia
